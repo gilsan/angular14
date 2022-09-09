@@ -1,20 +1,36 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
+import { PrimengModule } from './primeng.module';
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 import { NgtCanvas } from '@angular-three/core';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ReactiveFormsModule } from '@angular/forms';
+import { SidebarComponent } from './sidebar/sidebar.component';
+
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    SidebarComponent,
+
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
+    ReactiveFormsModule,
+    PrimengModule,
     AppRoutingModule,
-    NgtCanvas
+    // NgtCoreModule,
+    // NgtMeshModule,
+    // NgtBoxGeometryModule,
+    // NgtMeshStandardMaterialModule,
+    // NgtAmbientLightModule,
+    // NgtSpotLightModule
   ],
   providers: [],
   bootstrap: [AppComponent]

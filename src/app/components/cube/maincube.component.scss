@@ -1,0 +1,31 @@
+.maincube {
+ width: 600px;
+ height: 600px;
+ border: 1px solid black;
+ padding: 10px;
+//  background-image: url('./24.jpg');
+//  background-size: cover;
+
+}
+
+.container {
+  margin-top: 15vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
+
+  .left {
+    p {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%);
+      color: green;
+      z-index: 1;
+      font-size: 2rem;
+    }
+  }
+}
+
+

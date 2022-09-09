@@ -1,6 +1,5 @@
-<div class="canvas-container">
-  <ngt-canvas>
-
-  </ngt-canvas>
+<div class="toolbar" [ngClass]="toolBarClass()">
+  <app-sidebar (sidebarshow)="sidebarshow($event)"></app-sidebar>
 </div>
-<router-outlet></router-outlet>
+
+ <router-outlet></router-outlet>

@@ -1,0 +1,15 @@
+<ngt-mesh
+      [position]="position"
+      (pointerover)="hovered = true"
+      (pointerout)="hovered = false"
+      (click)="active = !active"
+      [scale]="active ? 1.5 : 1"
+      (beforeRender)="onBeforeRender($event.object)"
+>
+    <ngt-box-geometry></ngt-box-geometry>
+    <ngt-mesh-standard-material
+      [map]="(texture$ | async)!">
+      <!-- [color]="hovered ? 'turquoise' : 'red'"  > -->
+    </ngt-mesh-standard-material>
+
+</ngt-mesh>

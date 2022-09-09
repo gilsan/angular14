@@ -1,0 +1,25 @@
+<p-sidebar [(visible)]="display" [style]="{ width: '10em' }" (onShow)="onShow()" (onHide)="onHide()">
+  <div class="flex flex-column justify-content-center mb-4 align-content-center">
+    <button pButton pRipple type="button" label="로그인" class="p-button-text"  ></button>
+    <button pButton pRipple type="button" label="교육" class="p-button-text"  ></button>
+    <button pButton pRipple type="button" label="등록" class="p-button-text" ></button>
+    <button pButton pRipple type="button" label="로그아웃" class="p-button-text" ></button>
+  </div>
+</p-sidebar>
+
+<p-toolbar>
+  <div class="p-toolbar-group-left">
+    <p-button
+      icon="pi pi-align-justify"
+      (click)="toggle()"
+      [style]="{ 'margin-left': '.5em', 'margin-right': '.5em' }"
+    ></p-button>
+    <button #btn type="button" pButton label="THREE" class="p-button-text" (click)="menu.toggle($event)"></button>
+    <p-tieredMenu #menu [model]="items" [popup]="true"></p-tieredMenu>
+    <button #btn2 type="button" pButton label="CSS Animation" class="p-button-text"
+    (click)="animationsMenu.toggle($event)"></button>
+    <p-tieredMenu #animationsMenu [model]="animationsItems" [popup]="true"></p-tieredMenu>
+    <button #btn3 type="button" pButton label="앵귤러예제" class="p-button-text" (click)="sampleAngularMenu.toggle($event)"></button>
+    <p-tieredMenu #sampleAngularMenu [model]="sampleAngularLists" [popup]="true"></p-tieredMenu>
+  </div>
+</p-toolbar>
