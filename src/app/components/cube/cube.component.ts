@@ -1,5 +1,5 @@
 import { NgtVector3 } from '@angular-three/core';
-import { NgtBoxGeometry } from '@angular-three/core/geometries';
+import { NgtBoxGeometry, NgtPlaneGeometry } from '@angular-three/core/geometries';
 import { NgtMeshStandardMaterial } from '@angular-three/core/materials';
 import { NgtMesh } from '@angular-three/core/meshes';
 import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
@@ -13,7 +13,9 @@ import { Observable } from 'rxjs';
   selector: 'app-cube',
   standalone: true,
   templateUrl: './cube.component.html',
-  imports: [NgtMesh, NgtMeshStandardMaterial, NgtBoxGeometry, NgtSobaOrbitControls, AsyncPipe],
+  imports: [NgtMesh, NgtMeshStandardMaterial, NgtBoxGeometry,
+    NgtPlaneGeometry,
+     NgtSobaOrbitControls, AsyncPipe],
   changeDetection: ChangeDetectionStrategy.OnPush,
   providers: [NgtTextureLoader],
 })
