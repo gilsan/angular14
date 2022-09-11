@@ -27,12 +27,12 @@ export class SidebarComponent implements OnInit {
       {
         label: '큐브',
         icon: 'pi pi-refresh',
-        routerLink: '/cube',
+        routerLink: '/geometry/cube',
       },
       {
-        label: '라스팔마호텔',
+        label: '일반큐브',
         icon: 'pi pi-times',
-        routerLink: '/learncss/trillo',
+        routerLink: '/geometry/plane',
       },
       {
         label: '주택안내',

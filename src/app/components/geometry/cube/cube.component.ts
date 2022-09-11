@@ -5,9 +5,9 @@ import { NgtMesh } from '@angular-three/core/meshes';
 import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 import { Mesh } from 'three';
 import { NgtSobaOrbitControls } from '@angular-three/soba/controls';
-import { NgtSobaLoader, NgtTextureLoader } from '@angular-three/soba/loaders';
+import { NgtTextureLoader } from '@angular-three/soba/loaders';
 import { AsyncPipe, NgIf } from '@angular/common';
-import { Observable } from 'rxjs';
+
 
 @Component({
   selector: 'app-cube',
@@ -22,6 +22,7 @@ import { Observable } from 'rxjs';
 export class CubeComponent {
 
   @Input() position?: NgtVector3;
+
 
   hovered = false;
   active = false;
