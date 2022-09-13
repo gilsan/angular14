@@ -19,7 +19,6 @@ export class SidebarComponent implements OnInit {
   ngOnInit(): void {
     this.menuList();
 
-
   }
 
   menuList() {
@@ -30,7 +29,7 @@ export class SidebarComponent implements OnInit {
         routerLink: '/geometry/cube',
       },
       {
-        label: '일반큐브',
+        label: '평면',
         icon: 'pi pi-times',
         routerLink: '/geometry/plane',
       },

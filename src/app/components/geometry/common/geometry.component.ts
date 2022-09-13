@@ -2,7 +2,7 @@ import { NgtVector3 } from '@angular-three/core';
 import { NgtBoxGeometry, NgtPlaneGeometry } from '@angular-three/core/geometries';
 import { NgtMeshStandardMaterial } from '@angular-three/core/materials';
 import { NgtMesh } from '@angular-three/core/meshes';
-import { AfterViewInit, ChangeDetectionStrategy, Component, Input, ViewChild } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 import { Mesh } from 'three';
 import { NgtSobaOrbitControls } from '@angular-three/soba/controls';
 import { NgtTextureLoader } from '@angular-three/soba/loaders';
@@ -10,9 +10,9 @@ import { AsyncPipe, NgIf } from '@angular/common';
 
 
 @Component({
-  selector: 'app-planegeometry',
+  selector: 'app-geo',
   standalone: true,
-  templateUrl: './planegeometry.component.html',
+  templateUrl: './geometry.component.html',
   imports: [
     NgtMesh,
     NgtMeshStandardMaterial,
@@ -23,33 +23,17 @@ import { AsyncPipe, NgIf } from '@angular/common';
   changeDetection: ChangeDetectionStrategy.OnPush,
   providers: [NgtTextureLoader],
 })
-export class PlaneGeometryComponent implements   AfterViewInit {
+export class GeometryComponent {
 
-  planeGeometry!: THREE.PlaneGeometry;
-  count = 0;
-  @ViewChild('material') material?: NgtMeshStandardMaterial;
-  @ViewChild('planegeo') planegeo?: NgtPlaneGeometry;
   @Input() position?: NgtVector3;
-
-
-  hovered = false;
-  active = false;
 
   readonly texture$ = this.textureLoader.load('assets/background/19.jpg');
   constructor(private textureLoader: NgtTextureLoader) {}
 
-  ngAfterViewInit(): void {
-    this.count = this.planeGeometry.attributes['position'].count;
-    for(let i =0; i <this.count; i++) {
-      const x = this.planeGeometry.attributes['position'].getX(i);
-      const y = this.planeGeometry.attributes['position'].getY(i);
-      this.planeGeometry.attributes['position'].setZ(i, Math.sin(x));
-      this.planeGeometry.computeVertexNormals();
-    }
+  //  회전
+  onBeforeRender(cube: Mesh) {
+    cube.rotation.x += 0.01;
+    cube.rotation.y += 0.01;
   }
-
-
-
-
 
 }

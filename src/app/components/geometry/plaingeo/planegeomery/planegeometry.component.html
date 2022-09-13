@@ -1,17 +1,7 @@
-<ngt-mesh
-      [position]="position"
-      (pointerover)="hovered = true"
-      (pointerout)="hovered = false"
-      (click)="active = !active"
-      [scale]="active ? 1.5 : 1"
-      (beforeRender)="onBeforeRender($event.object)"
->
-    <ngt-box-geometry></ngt-box-geometry>
-    <ngt-mesh-standard-material
-      [map]="(texture$ | async)!">
-      <!-- [color]="hovered ? 'turquoise' : 'red'"  >
-      const geometry = new THREE.PlaneGeometry( 10, 5, 10,10 );
-      -->
+<ngt-mesh>
+    <ngt-plane-geometry [args]="[10, 5, 10,10]" #planegeo (ready)="planeGeometry = $event"></ngt-plane-geometry>
+    <ngt-mesh-standard-material #material
+      [map]="(texture$ | async)!" [wireframe]="false">
     </ngt-mesh-standard-material>
 
 </ngt-mesh>
