@@ -10,6 +10,7 @@ import { NgtCanvas } from '@angular-three/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ReactiveFormsModule } from '@angular/forms';
 import { SidebarComponent } from './sidebar/sidebar.component';
+import { EngineComponent } from './components/engine/engine.component';
 
 
 
@@ -17,6 +18,7 @@ import { SidebarComponent } from './sidebar/sidebar.component';
   declarations: [
     AppComponent,
     SidebarComponent,
+    EngineComponent
 
   ],
   imports: [

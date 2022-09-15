@@ -30,11 +30,12 @@ import * as THREE from 'three';
 export class PlainGeometryComponent implements   AfterViewInit{
   position?: NgtVector3;
   camera!: THREE.Camera;
-  scene!: THREE.Scene;
+
 
 
   ngAfterViewInit() {
-   this.scene.background = new THREE.Color('0xff0000');
+
+
   }
 
 }

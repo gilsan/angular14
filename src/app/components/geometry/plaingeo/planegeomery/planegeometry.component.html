@@ -1,5 +1,5 @@
-<ngt-mesh>
-    <ngt-plane-geometry [args]="[10, 5, 10,10]" #planegeo (ready)="planeGeometry = $event"></ngt-plane-geometry>
+<ngt-mesh (ready)="mesh = $event" (beforeRender)="onCubeBeforeRender($event)">
+    <ngt-plane-geometry [args]="[13, 5, 15,9]" #planegeo (ready)="planeGeometry = $event"></ngt-plane-geometry>
     <ngt-mesh-standard-material #material
       [map]="(texture$ | async)!" [wireframe]="false">
     </ngt-mesh-standard-material>
