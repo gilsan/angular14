@@ -1,0 +1,39 @@
+
+<div class="canvas-container">
+    <ngt-canvas
+    [camera]="{fov: 60, near: 1, far: 1000, position: [400, 200, 0]}"
+    [scene]="{fog: fog, background: background}">
+        <ngt-soba-orbit-controls #orbit ></ngt-soba-orbit-controls>
+
+        <ngt-directional-light
+        color="#ffffff"
+          [position]="[1,1,1]"
+        ></ngt-directional-light>
+
+        <ngt-directional-light
+        color="#002288"
+        [position]="[-1,-1,-1]"
+      ></ngt-directional-light>
+
+        <ngt-ambient-light
+          color="#222222"
+        ></ngt-ambient-light>
+
+        <ngt-mesh
+          *ngFor="let position of amount"
+          [position]="[position.x, position.y, position.z]"
+          [matrixAutoUpdate]="false"
+        >
+        <ngt-cylinder-geometry
+        ngtId="cylinder" [args]="[0,10,30,4,1]"
+        ></ngt-cylinder-geometry>
+        <ngt-mesh-phong-material
+          ngtId="phong"
+          color="#ffffff" flatShading="true"
+        ></ngt-mesh-phong-material>
+
+      </ngt-mesh>
+
+    </ngt-canvas>
+</div>
+

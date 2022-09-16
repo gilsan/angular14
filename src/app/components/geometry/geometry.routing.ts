@@ -3,6 +3,7 @@ import { RouterModule, Routes } from "@angular/router";
 import { EngineComponent } from "../engine/engine.component";
 import { MainCubeComponent } from "./cube/maincube.component";
 import { GeometryComponent } from "./geometry.component";
+import { OrbitComponent } from "./orbit/orbit.component";
 import { PlainGeometryComponent } from "./plaingeo/plainGeometry.component";
 
 const routes: Routes = [
@@ -10,7 +11,8 @@ const routes: Routes = [
       children: [
           { path: 'cube', component: MainCubeComponent },
           { path: 'plane', component: PlainGeometryComponent },
-          { path: 'engine', component: EngineComponent }
+          { path: 'engine', component: EngineComponent },
+          { path: 'orbit', component: OrbitComponent }
     ]
   }
 ];

@@ -39,9 +39,9 @@ export class SidebarComponent implements OnInit {
         routerLink: '/geometry/engine',
       },
       {
-        label: 'Grid',
+        label: 'Orbit Control',
         icon: 'pi pi-upload',
-        routerLink: '/learncss/grid',
+        routerLink: '/geometry/orbit',
       },
     ];
   }
