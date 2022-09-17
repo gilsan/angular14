@@ -1,0 +1,52 @@
+
+.main-card {
+  height: 100%;
+  padding: 10px 2rem;
+
+  display: grid;
+
+  grid-template-columns: repeat(3, minmax(20rem, 1fr));
+  grid-template-rows: repeat(2, 300px);
+  grid-row-gap: 10px;
+  grid-column-gap: 10px;
+
+
+  .boxGeometry {
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
+
+  .lambert {
+    grid-column: 2/3;
+    grid-row: 1/2;
+  }
+  .phong {
+    grid-column: 3/4;
+    grid-row: 1/2;
+  }
+  .standard {
+    grid-column: 4/5;
+    grid-row: 1/2;
+  }
+
+  .physical {
+    grid-column: 1/2;
+    grid-row: 2/3;
+  }
+
+  .matcap {
+    grid-column: 2/3;
+    grid-row: 2/3;
+  }
+
+  .toon {
+    grid-column: 3/4;
+    grid-row: 2/3;
+  }
+
+
+}
+
+h3 {
+  text-align: center;
+}

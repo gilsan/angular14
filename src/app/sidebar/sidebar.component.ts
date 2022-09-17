@@ -43,6 +43,15 @@ export class SidebarComponent implements OnInit {
         icon: 'pi pi-upload',
         routerLink: '/geometry/orbit',
       },
+      {
+        label: 'Materiala',
+        icon: 'pi pi-refresh',
+        items: [
+          { label: 'Normal', icon: 'pi pi-refresh',routerLink: '/geometry/normal'},
+
+        ],
+        style: {'width' : '200px', 'color': 'blue'}
+      },
     ];
   }
 

@@ -1,0 +1,134 @@
+<div class="container-box">
+  <div class="main-card">
+    <div class="boxGeometry">
+        <h3>MeshNormalMaterial</h3>
+        <ngt-canvas>
+
+          <ngt-ambient-light intensity="0.5"></ngt-ambient-light>
+          <ngt-spot-light [position]="10" angle="0.15" penumbra="1"></ngt-spot-light>
+          <ngt-point-light [position]="-10"></ngt-point-light>
+
+          <ngt-mesh
+            (beforeRender)="onCubeBeforeRender($event)">
+            <app-box></app-box>
+            <ngt-mesh-normal-material></ngt-mesh-normal-material>
+          </ngt-mesh>
+
+          </ngt-canvas>
+    </div>
+
+
+    <div class="lambert">
+      <h3>MeshLambertMaterial</h3>
+      <ngt-canvas>
+        <ngt-ambient-light intensity="0.5"></ngt-ambient-light>
+        <ngt-spot-light [position]="10" angle="0.15" penumbra="1"></ngt-spot-light>
+        <ngt-point-light [position]="-10"></ngt-point-light>
+
+        <ngt-mesh
+          (beforeRender)="onCubeBeforeRender($event)"
+          [scale]="2">
+          <app-sphere></app-sphere>
+          <app-lambert></app-lambert>
+          <!-- <ngt-mesh-lambert-material></ngt-mesh-lambert-material> -->
+        </ngt-mesh>
+        <ngt-soba-orbit-controls></ngt-soba-orbit-controls>
+        </ngt-canvas>
+    </div>
+
+    <div class="phong">
+      <h3>MeshPhongMaterial</h3>
+      <ngt-canvas>
+
+        <ngt-ambient-light intensity="0.5"></ngt-ambient-light>
+        <ngt-spot-light [position]="10" angle="0.15" penumbra="1"></ngt-spot-light>
+        <ngt-point-light [position]="-10"></ngt-point-light>
+
+        <ngt-mesh
+          (beforeRender)="onCubeBeforeRender($event)"
+          [scale]="2">
+          <app-icosahedron></app-icosahedron>
+          <app-phong></app-phong>
+          <!-- <ngt-mesh-phong-material metalness="0.8"></ngt-mesh-phong-material> -->
+        </ngt-mesh>
+        <ngt-soba-orbit-controls></ngt-soba-orbit-controls>
+        </ngt-canvas>
+    </div>
+
+
+    <div class="standard">
+      <h3>MeshStandardMaterial</h3>
+      <ngt-canvas>
+        <ngt-ambient-light intensity="0.5"></ngt-ambient-light>
+        <ngt-spot-light [position]="10" angle="0.15" penumbra="1"></ngt-spot-light>
+        <ngt-point-light [position]="-10"></ngt-point-light>
+
+        <ngt-mesh>
+          <app-plane></app-plane>
+          <ngt-mesh-standard-material
+           metalness="0.8"
+          ></ngt-mesh-standard-material>
+        </ngt-mesh>
+        <ngt-soba-orbit-controls></ngt-soba-orbit-controls>
+        </ngt-canvas>
+    </div>
+
+    <div class="physical">
+      <h3>MeshPhysicalMaterial</h3>
+      <ngt-canvas>
+        <ngt-ambient-light intensity="0.5"></ngt-ambient-light>
+        <ngt-spot-light [position]="10" angle="0.15" penumbra="1"></ngt-spot-light>
+        <ngt-point-light [position]="-10"></ngt-point-light>
+
+        <ngt-mesh>
+          <app-torusknot></app-torusknot>
+          <ngt-mesh-physical-material
+            color="#54483A"
+          ></ngt-mesh-physical-material>
+        </ngt-mesh>
+        <ngt-soba-orbit-controls></ngt-soba-orbit-controls>
+        </ngt-canvas>
+    </div>
+
+
+    <div class="matcap">
+      <h3>MeshMatcapMaterial</h3>
+      <ngt-canvas>
+        <ngt-ambient-light intensity="0.5"></ngt-ambient-light>
+        <ngt-spot-light [position]="10" angle="0.15" penumbra="1"></ngt-spot-light>
+        <ngt-point-light [position]="-10"></ngt-point-light>
+
+        <ngt-mesh>
+          <app-torusknot></app-torusknot>
+          <ngt-mesh-physical-material
+            color="#e91e63" flatShading="0.07"
+          ></ngt-mesh-physical-material>
+        </ngt-mesh>
+        <ngt-soba-orbit-controls></ngt-soba-orbit-controls>
+        </ngt-canvas>
+    </div>
+
+    <div class="toon">
+      <h3>MeshToonMaterial</h3>
+      <ngt-canvas>
+        <ngt-ambient-light intensity="0.5"></ngt-ambient-light>
+        <ngt-spot-light [position]="10" angle="0.15" penumbra="1"></ngt-spot-light>
+        <ngt-point-light [position]="-10"></ngt-point-light>
+
+        <ngt-mesh>
+          <app-torusknot></app-torusknot>
+          <ngt-mesh-physical-material
+
+          ></ngt-mesh-physical-material>
+        </ngt-mesh>
+        <ngt-soba-orbit-controls></ngt-soba-orbit-controls>
+        </ngt-canvas>
+    </div>
+
+
+
+  </div>
+</div>
+
+
+
