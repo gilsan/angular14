@@ -1,0 +1,23 @@
+<div class="container-box">
+  <div class="main-card">
+    <div class="boxGeometry">
+        <h3>SpecularMap</h3>
+        <ngt-canvas>
+
+          <ngt-ambient-light></ngt-ambient-light>
+          <ngt-spot-light [position]="10" angle="0.15" penumbra="1"></ngt-spot-light>
+          <ngt-point-light [position]="-10"></ngt-point-light>
+
+          <ngt-mesh>
+            <app-box></app-box>
+            <!-- <ngt-mesh-physical-material
+                [map]="(texture$ | async)!"
+            ></ngt-mesh-physical-material> -->
+            <app-physical [texture]=texture></app-physical>
+             <!-- <app-normal></app-normal> -->
+          </ngt-mesh>
+
+          </ngt-canvas>
+    </div>
+  </div>
+</div>
