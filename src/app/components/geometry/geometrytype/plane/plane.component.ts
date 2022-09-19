@@ -1,5 +1,5 @@
 import { NgtPlaneGeometry } from '@angular-three/core/geometries';
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 
 
 @Component({
@@ -14,5 +14,6 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
 })
 export class PlaneComponent {
 
+  @Input() args = [0,0,0,0];
 
 }

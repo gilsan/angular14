@@ -1,23 +1,132 @@
 <div class="container-box">
   <div class="main-card">
-    <div class="boxGeometry">
-        <h3>SpecularMap</h3>
+        <div class="boxGeometry">
+            <h3>BoxGeometry</h3>
+            <ngt-canvas>
+
+              <ngt-ambient-light></ngt-ambient-light>
+              <ngt-spot-light [position]="10" angle="0.15" penumbra="1"></ngt-spot-light>
+              <ngt-point-light [position]="-10"></ngt-point-light>
+
+              <ngt-mesh  [scale]="2" [position]="[2,0,0]" (beforeRender)="onCubeBeforeRender($event)">
+                <app-box></app-box>
+                <app-physical [texture]=texture></app-physical>
+                <!-- <app-normal></app-normal> -->
+              </ngt-mesh>
+
+              <ngt-mesh #mesh [scale]="2" [position]="[-2,0,0]" (click)="meshClick(mesh)">
+                <app-box></app-box>
+                <app-standard></app-standard>
+
+              </ngt-mesh>
+              <ngt-soba-orbit-controls></ngt-soba-orbit-controls>
+              </ngt-canvas>
+        </div>
+
+        <div class="lambert">
+          <h3>SpecularMap</h3>
+          <ngt-canvas>
+
+            <!-- <ngt-ambient-light></ngt-ambient-light> -->
+            <!-- <ngt-spot-light [position]="10" angle="0.15" penumbra="1"></ngt-spot-light> -->
+            <ngt-point-light [position]="[0, 5, 10]" [args]="['#ffffff',1]"></ngt-point-light>
+
+            <ngt-mesh  [scale]="6">
+              <app-plane></app-plane>
+              <app-phong
+                [texture]=phongTexture
+                [specularMap]="specularMap"
+              ></app-phong>
+            </ngt-mesh>
+
+
+            <ngt-soba-orbit-controls [enableDamping]="true"></ngt-soba-orbit-controls>
+            </ngt-canvas>
+      </div>
+
+
+      <div class="phong">
+        <h3>BumpMap</h3>
         <ngt-canvas>
 
-          <ngt-ambient-light></ngt-ambient-light>
-          <ngt-spot-light [position]="10" angle="0.15" penumbra="1"></ngt-spot-light>
-          <ngt-point-light [position]="-10"></ngt-point-light>
+          <!-- <ngt-ambient-light></ngt-ambient-light> -->
+          <!-- <ngt-spot-light [position]="10" angle="0.15" penumbra="1"></ngt-spot-light> -->
+          <ngt-point-light [position]="[0, 5, 10]" [args]="['#ffffff',1]"></ngt-point-light>
 
-          <ngt-mesh>
-            <app-box></app-box>
-            <!-- <ngt-mesh-physical-material
-                [map]="(texture$ | async)!"
-            ></ngt-mesh-physical-material> -->
-            <app-physical [texture]=texture></app-physical>
-             <!-- <app-normal></app-normal> -->
+          <ngt-mesh  [scale]="6">
+            <app-plane></app-plane>
+            <app-phong
+              [texture]=phongTexture
+              [bump] = "bump"
+            ></app-phong>
           </ngt-mesh>
 
+
+          <ngt-soba-orbit-controls [enableDamping]="true"></ngt-soba-orbit-controls>
           </ngt-canvas>
-    </div>
+      </div>
+
+      <div class="physical">
+        <h3>NormalMap</h3>
+        <ngt-canvas>
+
+          <!-- <ngt-ambient-light></ngt-ambient-light>
+          <ngt-spot-light [position]="10" angle="0.15" penumbra="1"></ngt-spot-light> -->
+          <ngt-point-light [position]="[0, 5, 10]" [args]="['#ffffff',1]"></ngt-point-light>
+
+          <ngt-mesh  [scale]="6">
+            <app-plane></app-plane>
+            <app-phong
+              [texture]=phongTexture
+              [normal] = "normal"
+            ></app-phong>
+          </ngt-mesh>
+
+          <ngt-soba-orbit-controls [enableDamping]="true"></ngt-soba-orbit-controls>
+          </ngt-canvas>
+      </div>
+
+      <div class="matcap">
+        <h3>DisplacementMap</h3>
+        <ngt-canvas>
+
+          <!-- <ngt-ambient-light></ngt-ambient-light>
+          <ngt-spot-light [position]="10" angle="0.15" penumbra="1"></ngt-spot-light> -->
+          <ngt-point-light [position]="[0, 5, 10]" [args]="['#ffffff',1]"></ngt-point-light>
+
+          <ngt-mesh  [scale]="6">
+            <app-plane></app-plane>
+            <app-phong
+              [texture]=phongTexture
+              [displacement] = "displacement"
+            ></app-phong>
+          </ngt-mesh>
+
+          <ngt-soba-orbit-controls></ngt-soba-orbit-controls>
+          </ngt-canvas>
+      </div>
+
+      <div class="toon">
+        <h3>MinMap</h3>
+        <ngt-canvas>
+
+          <!-- <ngt-ambient-light></ngt-ambient-light>
+          <ngt-spot-light [position]="10" angle="0.15" penumbra="1"></ngt-spot-light> -->
+          <ngt-point-light [position]="[0, 5, 10]" [args]="['#ffffff',1]"></ngt-point-light>
+
+          <ngt-mesh  [scale]="6">
+            <app-plane></app-plane>
+            <app-phong
+              [texture]=phongTexture
+              [displacement] = "displacement"
+            ></app-phong>
+          </ngt-mesh>
+
+          <ngt-soba-orbit-controls></ngt-soba-orbit-controls>
+          </ngt-canvas>
+      </div>
+
+
+
   </div>
 </div>

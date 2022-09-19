@@ -21,6 +21,8 @@ import { LambertComponent } from "../../materialtype/lambertMaterial/lambert.com
 import { PhongComponent } from "../../materialtype/phongMaterial/phong.component";
 import { NormalComponent } from "../../materialtype/normal/normal.component";
 import { PhysicalComponent } from "../../materialtype/physical/physical.component";
+import { StandardComponent } from "../../materialtype/standard/standard.component";
+import { Mesh } from "three";
 
 
 @Component({
@@ -78,6 +80,7 @@ import { PhysicalComponent } from "../../materialtype/physical/physical.componen
     PhongComponent,
     NormalComponent,
     PhysicalComponent,
+    StandardComponent
 
   ],
   providers: [NgtTextureLoader],
@@ -86,7 +89,12 @@ export class MaterialMapComponent implements OnInit   {
 
  fog = new THREE.FogExp2(0xcccccc, 0.002);
  background = new THREE.Color(0xcccccc);
- texture ='19.jpg';
+ texture ='assets/background/19.jpg';
+ phongTexture ='assets/texture/worldColour.5400x2700.jpg'; // grid.png worldColour.5400x2700.jpg
+ specularMap ='assets/texture/earthSpecular.jpg'; // earthSpecular.jpg, grayscale-test.png
+ bump = 'assets/texture/earth_bumpmap.jpg'; // earth_bumpmap.jpg
+ normal = 'assets/texture/earth_normalmap_8192x4096.jpg';
+ displacement = 'assets/texture/gebco_bathy.5400x2700_8bit.jpg';
 
 //  readonly texture$ = this.textureLoader.load(this.texture);
 //  constructor(private textureLoader: NgtTextureLoader) {}
@@ -99,8 +107,12 @@ export class MaterialMapComponent implements OnInit   {
   onCubeBeforeRender($event: { state: NgtRenderState; object: THREE.Mesh }) {
     const cube = $event.object;
     // we are rotating our cube little by little before it gets rendered
-    cube.rotation.x += 0.01;
+  //  cube.rotation.x += 0.01;
     cube.rotation.y += 0.01;
+  }
+
+  meshClick(mesh: any) {
+    console.log('test...', mesh);
   }
 
 

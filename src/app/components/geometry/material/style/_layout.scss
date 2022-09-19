@@ -6,6 +6,7 @@
   display: grid;
 
   grid-template-columns: repeat(3, minmax(20rem, 1fr));
+
   grid-template-rows: repeat(2, 300px);
   grid-row-gap: 10px;
   grid-column-gap: 10px;
@@ -14,6 +15,7 @@
   .boxGeometry {
     grid-column: 1/2;
     grid-row: 1/2;
+
   }
 
   .lambert {

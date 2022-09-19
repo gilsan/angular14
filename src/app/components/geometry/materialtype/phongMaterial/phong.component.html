@@ -1,3 +1,9 @@
  <ngt-mesh-phong-material
  [map]="(texture$ | async)!"
+ [specularMap]="(specular$ | async)"
+ [bumpMap]="(bump$ | async)"
+ [normalMap]="(normal$ | async)"
+ [displacementMap]="(displacement$ | async)"
+ [bumpScale]="1"
+
  ></ngt-mesh-phong-material>

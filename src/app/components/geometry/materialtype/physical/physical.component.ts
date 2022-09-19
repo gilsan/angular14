@@ -3,7 +3,8 @@ import { ChangeDetectionStrategy, Component, Input, OnInit } from '@angular/core
 import { NgtTextureLoader } from '@angular-three/soba/loaders';
 import { AsyncPipe, NgIf } from '@angular/common';
 import { Observable } from 'rxjs';
-import { Texture } from 'three';
+import { Texture, TextureLoader } from 'three';
+import { NgtLoader } from '@angular-three/core';
 
 @Component({
   selector: 'app-physical',
@@ -19,12 +20,18 @@ import { Texture } from 'three';
 export class PhysicalComponent implements OnInit {
 
   @Input() texture: string = '';
-
-  readonly texture$ = this.texture.length > 0 ? this.textureLoader.load('assets/background/'+this.texture): null ;
-  constructor(private textureLoader: NgtTextureLoader) {}
+  texture$: Observable<Texture>| null = null ;
+  colors = ['red', 'green', 'blue', 'hotpink', 'orange', 'teal'];
+  constructor(
+    private textureLoader: NgtTextureLoader,
+    ) {}
 
   ngOnInit(): void {
-      console.log(this.texture);
+
+      if (this.texture.length) {
+        this.texture$ = this.textureLoader.load(this.texture);
+      }
+
   }
 
 
