@@ -48,7 +48,8 @@ export class SidebarComponent implements OnInit {
         icon: 'pi pi-refresh',
         items: [
           { label: 'Normal', icon: 'pi pi-refresh',routerLink: '/geometry/normal'},
-          { label: 'Map', icon: 'pi pi-refresh',routerLink: '/geometry/map'},
+          { label: '재질', icon: 'pi pi-refresh',routerLink: '/geometry/map'},
+          { label: '조명', icon: 'pi pi-refresh',routerLink: '/geometry/light'},
 
         ],
         style: {'width' : '200px', 'color': 'blue'}

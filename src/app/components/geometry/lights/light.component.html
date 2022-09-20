@@ -1,0 +1,80 @@
+<div class="container-box">
+  <div class="main-card">
+    <div class="boxGeometry">
+      <h3>Ambert Light</h3>
+      <ngt-canvas>
+        <ngt-ambient-light></ngt-ambient-light>
+        <!-- <ngt-spot-light [position]="10" angle="0.15" penumbra="1"></ngt-spot-light>
+        <ngt-point-light [position]="-10"></ngt-point-light> -->
+
+        <ngt-mesh  [scale]="1" [position]="[-8,0,0]"  >
+          <app-torus></app-torus>
+          <app-basic [texture]=texture></app-basic>
+        </ngt-mesh>
+
+        <ngt-mesh  [scale]="1" [position]="[-4,0,0]"  >
+          <app-torus></app-torus>
+          <app-lambert [texture]=texture></app-lambert>
+        </ngt-mesh>
+
+
+        <ngt-mesh  [scale]="1" [position]="[0,0,0]"  >
+          <app-torus></app-torus>
+          <app-phong [texture]=texture></app-phong>
+        </ngt-mesh>
+
+        <ngt-mesh  [scale]="1" [position]="[4,0,0]"  >
+          <app-torus></app-torus>
+          <app-physical [texture]=texture></app-physical>
+        </ngt-mesh>
+
+        <ngt-mesh  [scale]="1" [position]="[8,0,0]" >
+          <app-torus></app-torus>
+          <app-toon [texture]=texture></app-toon>
+        </ngt-mesh>
+
+        <ngt-soba-orbit-controls></ngt-soba-orbit-controls>
+        </ngt-canvas>
+    </div>
+
+    <div class="lambert">
+      <h3>Directional Light</h3>
+      <ngt-canvas>
+        <ngt-directional-light></ngt-directional-light>
+        <!-- <ngt-spot-light [position]="10" angle="0.15" penumbra="1"></ngt-spot-light>
+        <ngt-point-light [position]="-10"></ngt-point-light> -->
+
+        <ngt-mesh  [scale]="1" [position]="[-8,0,0]"  >
+          <app-torus></app-torus>
+          <app-basic [texture]=texture></app-basic>
+        </ngt-mesh>
+
+        <ngt-mesh  [scale]="1" [position]="[-4,0,0]"  >
+          <app-torus></app-torus>
+          <app-lambert [texture]=texture></app-lambert>
+        </ngt-mesh>
+
+
+        <ngt-mesh  [scale]="1" [position]="[0,0,0]"  >
+          <app-torus></app-torus>
+          <app-phong [texture]=texture></app-phong>
+        </ngt-mesh>
+
+        <ngt-mesh  [scale]="1" [position]="[4,0,0]"  >
+          <app-torus></app-torus>
+          <app-physical [texture]=texture></app-physical>
+        </ngt-mesh>
+
+        <ngt-mesh  [scale]="1" [position]="[8,0,0]" >
+          <app-torus></app-torus>
+          <app-toon [texture]=texture></app-toon>
+        </ngt-mesh>
+
+        <ngt-soba-orbit-controls></ngt-soba-orbit-controls>
+        </ngt-canvas>
+    </div>
+
+
+  </div>
+</div>
+
