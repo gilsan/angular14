@@ -13,8 +13,14 @@ export class EngineService implements OnDestroy {
 
   private cube!: THREE.Mesh;
   private frameId: number| null = null;
+  private planegeometry!: THREE.PlaneGeometry;
 
-  public constructor(private ngZone: NgZone) {}
+  private count = 0;
+  private clock =  new THREE.Clock();
+
+  public constructor(private ngZone: NgZone) {
+
+  }
 
   public ngOnDestroy() {
     if (this.frameId != null) {
@@ -31,8 +37,8 @@ export class EngineService implements OnDestroy {
       alpha: true,    // transparent background
       antialias: true // smooth edges
     });
-    this.renderer.setSize(window.innerWidth, window.innerHeight);
-
+  //  this.renderer.setSize(window.innerWidth, window.innerHeight);
+  this.renderer.setSize(400, 300);
     // create the scene
     this.scene = new THREE.Scene();
 
@@ -47,15 +53,17 @@ export class EngineService implements OnDestroy {
     this.light.position.z = 10;
     this.scene.add(this.light);
 
-    const texture = new THREE.TextureLoader().load('../../assets/background/19.jpg');
+    const texture = new THREE.TextureLoader().load('../../assets/background/26.jpg');
     // const geometry = new THREE.BoxGeometry(1, 1, 1);
-    const geometry = new THREE.PlaneGeometry( 10, 5, 10,10 );
+
+    this.planegeometry = new THREE.PlaneGeometry( 19, 10, 15,10 );
     const material = new THREE.MeshBasicMaterial({
      // color: 0x00ff00,
       map: texture
-
     });
-    this.cube = new THREE.Mesh( geometry, material );
+    this.count = this.planegeometry.attributes['position'].count;
+
+    this.cube = new THREE.Mesh( this.planegeometry, material );
     this.scene.add(this.cube);
 
   }
@@ -79,12 +87,25 @@ export class EngineService implements OnDestroy {
   }
 
   render() {
+
+    const time = this.clock.getElapsedTime();
+    for (let i =0; i < this.count; i++) {
+      const x = this.planegeometry.attributes['position'].getX(i);
+      const y = this.planegeometry.attributes['position'].getY(i);
+      // animations
+      const anim1 =  0.75 * Math.sin(x * 2 + time * 0.7);
+      const anim2 =  0.25 * Math.sin(x + time * 0.7);
+
+      this.planegeometry.attributes['position'].setZ(i, anim1 + anim2);
+      this.planegeometry.computeVertexNormals();
+      this.planegeometry.attributes['position'].needsUpdate = true
+    }
+
+
     this.frameId = requestAnimationFrame(() => {
       this.render();
     });
 
-    // this.cube.rotation.x += 0.01;
-    // this.cube.rotation.y += 0.01;
     this.renderer.render(this.scene, this.camera);
   }
 
