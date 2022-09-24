@@ -34,7 +34,7 @@ export class SidebarComponent implements OnInit {
         routerLink: '/geometry/plane',
       },
       {
-        label: 'THREE 기본',
+        label: '기본',
         icon: 'pi pi-external-link',
         routerLink: '/geometry/engine',
       },
