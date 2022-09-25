@@ -8,6 +8,10 @@ const routes: Routes = [
     path: 'geometry',
     loadChildren: () => import('./components/geometry/geometry.module').then((m) => m.GeometryModule),
   },
+  {
+    path: 'component100',
+    loadChildren: () => import('./ngcomponent100/ngcomponent100.module').then((m) => m.Ngcomponent100Module),
+  },
 ];
 
 @NgModule({
