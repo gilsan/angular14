@@ -6,7 +6,17 @@
 @import '~primeflex/primeflex.css';
 // @import '~animate.css/animate.css';
 
+@import './app/ngcomponent100/styles/colors';
+@import './app/ngcomponent100/styles/mixins';
+@import './app/ngcomponent100/styles/variables';
 
+* {
+  scroll-behavior:smooth;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+
+}
 
 
 html, body {
@@ -17,5 +27,5 @@ html, body {
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 .container-box {
-  margin-top: 85px;
+  margin-top: 95px;
 }
