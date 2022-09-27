@@ -10,7 +10,11 @@
     </ul>
   </app-toolbar>
 
-  <router-outlet></router-outlet>
+  <app-card [iconClass]="'pi pi-info'" [title]="'카드'" [subTitle]="'콤포넌트'">
+      <div body>내용물</div>
+      <div footer>하단부</div>
+  </app-card>
+  <!-- <router-outlet></router-outlet> -->
 </div>
 
 
