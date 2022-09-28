@@ -1,0 +1,22 @@
+
+<div class="components-container">
+  <app-card [iconClass]="'pi pi-info'" [title]="'카드'" [subTitle]="'콤포넌트'">
+    <div body>내용물</div>
+    <div footer>하단부</div>
+  </app-card>
+
+  <app-card [iconClass]="'pi pi-chevron-circle-right'" [title]="'아코디언'"  [subTitle]="'콤포넌트'">
+    <app-accordion  body [items]="accordionItems"></app-accordion>
+  </app-card>
+
+  <app-card [iconClass]="'pi pi-chevron-circle-right'" [title]="'진행바'"  [subTitle]="'콤포넌트'">
+    <app-progressbar  body ></app-progressbar>
+  </app-card>
+
+
+
+</div>
+
+
+
+

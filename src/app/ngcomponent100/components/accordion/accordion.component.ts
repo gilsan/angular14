@@ -1,4 +1,5 @@
 import { Component, Input } from "@angular/core";
+import { AccordionItem } from "./accordion-item.interface";
 
 
 @Component({
@@ -8,7 +9,10 @@ import { Component, Input } from "@angular/core";
 })
 export class AccordionComponent {
 
-  @Input() title: string = "";
-  @Input() subTitle: string = "";
-  @Input() iconClass = "";
+  @Input()  items: AccordionItem[] =[];
+
+  toggle( item: AccordionItem): void {
+    item.isExpanded = !item.isExpanded;
+  }
+
 }

@@ -12,6 +12,7 @@ const routes: Routes = [
     path: 'component100',
     loadChildren: () => import('./ngcomponent100/ngcomponent100.module').then((m) => m.Ngcomponent100Module),
   },
+
 ];
 
 @NgModule({

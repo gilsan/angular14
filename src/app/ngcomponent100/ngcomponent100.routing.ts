@@ -4,7 +4,8 @@ import { Ngcomponent100Component } from "./ngcomponent100.component";
 
 
 const routes: Routes = [
-  { path: '', component: Ngcomponent100Component }
+  { path: '', component: Ngcomponent100Component },
+  
 ];
 
 
