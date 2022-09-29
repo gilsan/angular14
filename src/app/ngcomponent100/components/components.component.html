@@ -14,7 +14,13 @@
     <button footer (click)="progressBarUpadate()">갱신</button>
   </app-card>
 
+  <app-card [iconClass]="'pi pi-chevron-circle-right'" [title]="'별점수'"  [subTitle]="'콤포넌트'">
+    <app-starrating  body [rating]="4.5" ></app-starrating>
+  </app-card>
 
+  <app-card [iconClass]="'pi pi-chevron-circle-right'" [title]="'페이지'"  [subTitle]="'콤포넌트'">
+    <app-topofpage  body   ></app-topofpage>
+  </app-card>
 
 </div>
 
