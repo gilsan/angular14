@@ -10,7 +10,8 @@
   </app-card>
 
   <app-card [iconClass]="'pi pi-chevron-circle-right'" [title]="'진행바'"  [subTitle]="'콤포넌트'">
-    <app-progressbar  body ></app-progressbar>
+    <app-progress  body [value]="value" [max]="max"></app-progress>
+    <button footer (click)="progressBarUpadate()">갱신</button>
   </app-card>
 
 

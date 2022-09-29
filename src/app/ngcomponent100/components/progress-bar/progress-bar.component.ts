@@ -2,13 +2,13 @@ import { Component, Input } from "@angular/core";
 
 
 @Component({
-  selector: 'app-progressbar',
+  selector: 'app-progress',
   templateUrl: './progress-bar.component.html',
   styleUrls: ['./progress-bar.component.scss'],
 })
 export class ProgressbarComponent {
 
-  @Input() title: string = "";
-  @Input() subTitle: string = "";
-  @Input() iconClass = "";
+  @Input() value = 0;
+  @Input() max = 0;
+
 }

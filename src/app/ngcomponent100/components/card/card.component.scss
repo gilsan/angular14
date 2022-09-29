@@ -32,3 +32,14 @@
   }
 }
 
+:host ::ng-deep {
+  button {
+    border: 1px solid lightblue;
+    border-radius: 10px;
+    background-color: aqua;
+    padding: 5px;
+    font-weight: bold;
+    color: white;
+  }
+}
+
