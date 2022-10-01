@@ -4,8 +4,21 @@ import { Ngcomponent100Component } from "./ngcomponent100.component";
 
 
 const routes: Routes = [
-  { path: '', component: Ngcomponent100Component },
-  
+  { path: '', component: Ngcomponent100Component,
+        children: [
+          {
+            path: 'components',
+            loadChildren: () => import('./components/components.module').then((m) => m.ComponentsModule),
+          },
+          {
+            path: 'pipes',
+            loadChildren: () => import('./pipes/pipes.module').then((m) => m.PipesModule),
+          },
+        ]
+  },
+
+
+
 ];
 
 

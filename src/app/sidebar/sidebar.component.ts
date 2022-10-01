@@ -11,6 +11,7 @@ import { MenuItem } from 'primeng/api';
 export class SidebarComponent implements OnInit {
   display = false;
   items: MenuItem[] = [];
+  angularItems: MenuItem[]= [];
   animationsItems: MenuItem[] = [];
   sampleAngularLists: MenuItem[] = [];
 
@@ -18,6 +19,7 @@ export class SidebarComponent implements OnInit {
   @Output() sidebarshow = new EventEmitter<boolean>();
   ngOnInit(): void {
     this.menuList();
+    this.angularItem();
 
   }
 
@@ -55,6 +57,21 @@ export class SidebarComponent implements OnInit {
         style: {'width' : '200px', 'color': 'blue'}
       },
     ];
+  }
+
+  angularItem() {
+    this.angularItems = [
+      {
+        label: '콤포넌트',
+        icon: 'pi pi-refresh',
+        routerLink: '/component100',
+      },
+      {
+        label: '디렉티브',
+        icon: 'pi pi-times',
+        routerLink: '/pipes',
+      },
+    ]
   }
 
 
