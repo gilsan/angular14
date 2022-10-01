@@ -11,17 +11,18 @@ import { ComponentsRoutingModule } from "./components.routing";
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { TopOfPageComponent } from "./top-of-page/top-of-page.component";
 import { SharedModule } from "../shared/shared.module";
+import { LoaderComponent } from './loader/loader.component';
 
 
 @NgModule({
   declarations: [
     ComponentsComponent,
-
     AccordionComponent,
     ComponentsComponent,
     ProgressbarComponent,
     StarRatingsComponent,
     TopOfPageComponent,
+    LoaderComponent,
 
 
   ],
