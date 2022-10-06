@@ -12,6 +12,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { TopOfPageComponent } from "./top-of-page/top-of-page.component";
 import { SharedModule } from "../shared/shared.module";
 import { LoaderComponent } from './loader/loader.component';
+import { TwiterPostComponent } from "./twiter-post/twiter-post.component";
 
 
 @NgModule({
@@ -23,7 +24,7 @@ import { LoaderComponent } from './loader/loader.component';
     StarRatingsComponent,
     TopOfPageComponent,
     LoaderComponent,
-
+    TwiterPostComponent
 
   ],
   imports: [
