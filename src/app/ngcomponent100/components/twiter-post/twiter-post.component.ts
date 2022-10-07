@@ -1,6 +1,6 @@
 import { Component, Input  } from "@angular/core";
 import { Title } from "@angular/platform-browser";
-
+import { faTwitter } from "@fortawesome/free-brands-svg-icons";
 @Component({
   selector: 'app-twiterpost',
   templateUrl: './twiter-post.component.html',
@@ -8,7 +8,7 @@ import { Title } from "@angular/platform-browser";
 })
 export class TwiterPostComponent {
 
-
+  faTwitter = faTwitter;
   @Input() baseHref = 'https://www.DylanIsrael.com';
   @Input() hashTags: string[] = ['DylanIsrael', 'Javascript', 'TypeScript', 'Angular', '100 Angular Challenge'];
 
