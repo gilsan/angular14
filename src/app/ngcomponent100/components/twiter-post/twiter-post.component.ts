@@ -16,7 +16,7 @@ export class TwiterPostComponent {
 
   public get twiterUrl(): string {
     const base = this.getBaseWithHashTagsAndRoute();
-    const message = encodeURIComponent(`check out ${this.titleService.getTitle()} and become a CODING GOD!!!`);
+    const message = encodeURIComponent(`check out ${this.titleService.getTitle()} and become a CODING GOD!!!!`);
     return `${base}${message}`;
 
   }
