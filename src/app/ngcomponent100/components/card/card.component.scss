@@ -39,7 +39,11 @@
     background-color: aqua;
     padding: 5px;
     font-weight: bold;
-    color: white;
+    color: black;
+
+    &:hover {
+      cursor: pointer;
+    }
   }
 }
 

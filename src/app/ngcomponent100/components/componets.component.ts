@@ -9,7 +9,7 @@ import { AccordionItem } from "./accordion/accordion-item.interface";
 export class ComponentsComponent {
   public accordionItems: AccordionItem[] = [
     {
-      title: 'Example 1',
+      title: 'Example 10',
       content: 'Exampled Content 1',
       isExpanded: false,
     },
