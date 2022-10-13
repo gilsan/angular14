@@ -27,6 +27,10 @@ export class ComponentsComponent {
     this.value = 90;
   }
 
+  log() {
+    console.log('Debounce Click....');
+  }
+
 
 
 

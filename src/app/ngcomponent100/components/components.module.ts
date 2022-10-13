@@ -17,6 +17,7 @@ import { ModalComponent } from "./modal/modal.component";
 import { CardComponent } from "./card/card.component";
 
 
+
 @NgModule({
   declarations: [
 
@@ -29,6 +30,7 @@ import { CardComponent } from "./card/card.component";
     LoaderComponent,
     TwiterPostComponent,
     ModalComponent,
+
 
 
   ],

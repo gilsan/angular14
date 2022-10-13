@@ -43,6 +43,14 @@
 
   </app-card>
 
+  <app-card [iconClass]="'pi pi-chevron-circle-right'" [title]="'Debounce Click'"  [subTitle]="'디렉티브'">
+      <div body>
+         <button appDebounceClick (debounceClick)="log()">로그</button>
+      </div>
+
+
+  </app-card>
+
 
 
 
