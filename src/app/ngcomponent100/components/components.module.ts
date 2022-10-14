@@ -15,6 +15,7 @@ import { LoaderComponent } from './loader/loader.component';
 import { TwiterPostComponent } from "./twiter-post/twiter-post.component";
 import { ModalComponent } from "./modal/modal.component";
 import { CardComponent } from "./card/card.component";
+import { QuoteComponent } from "./quote/quote.component";
 
 
 
@@ -30,6 +31,7 @@ import { CardComponent } from "./card/card.component";
     LoaderComponent,
     TwiterPostComponent,
     ModalComponent,
+    QuoteComponent
 
 
 
