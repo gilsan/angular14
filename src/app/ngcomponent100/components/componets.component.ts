@@ -22,6 +22,7 @@ export class ComponentsComponent {
 
   value = 12;
   max = 100;
+  toggleValue = false;
 
   progressBarUpadate() {
     this.value = 90;
