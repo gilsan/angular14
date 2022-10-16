@@ -12,6 +12,7 @@ export class ToggleComponent {
 
   toggle() {
     this.isOn = !this.isOn;
+    console.log('test...');
   }
 
 
