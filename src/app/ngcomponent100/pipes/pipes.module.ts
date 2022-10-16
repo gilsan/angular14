@@ -4,6 +4,7 @@ import { PipesRoutingModule } from './pipes.routing';
 import { PipeComponent } from './pipe-document/pipe.component';
 import { SharedModule } from '../shared/shared.module';
 import { TruncatePipe } from './truncate/truncate.pipe';
+import { FilterTermPipe } from './filter-term.pipe';
 
 
 
@@ -13,6 +14,7 @@ import { TruncatePipe } from './truncate/truncate.pipe';
   declarations: [
     PipeComponent,
     TruncatePipe,
+    FilterTermPipe
 
   ],
   imports: [
