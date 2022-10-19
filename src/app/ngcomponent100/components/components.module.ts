@@ -17,6 +17,8 @@ import { ModalComponent } from "./modal/modal.component";
 import { CardComponent } from "./card/card.component";
 import { QuoteComponent } from "./quote/quote.component";
 import { ToggleComponent } from "./toggle/toggle.component";
+import { DebounceSearchComponent } from "./debounce-search/debounce-search.component";
+import { FormsModule } from "@angular/forms";
 
 
 
@@ -33,13 +35,14 @@ import { ToggleComponent } from "./toggle/toggle.component";
     TwiterPostComponent,
     ModalComponent,
     QuoteComponent,
-    ToggleComponent
-
+    ToggleComponent,
+    DebounceSearchComponent
 
 
   ],
   imports: [
     CommonModule,
+    FormsModule,
     ComponentsRoutingModule,
     SharedModule,
     FontAwesomeModule
