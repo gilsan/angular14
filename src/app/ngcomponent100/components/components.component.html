@@ -61,6 +61,12 @@
       <app-toggle [isOn]="toggleValue" body></app-toggle>
   </app-card>
 
+  <app-card [iconClass]="'pi pi-chevron-circle-right'" [title]="'검색'"  [subTitle]="'파이프'">
+   <app-debounce-search body (searchUpdate)="debounceExampleMethod($event)" ></app-debounce-search>
+</app-card>
+
+
+
 
 </div>
 

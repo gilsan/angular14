@@ -23,13 +23,17 @@ export class ComponentsComponent {
   value = 12;
   max = 100;
   toggleValue = false;
-
+  searchTerm ='앵귤러';
   progressBarUpadate() {
     this.value = 90;
   }
 
   log() {
     console.log('Debounce Click....');
+  }
+
+  debounceExampleMethod(val: string) {
+    console.log('[검색결과] ', val);
   }
 
 
