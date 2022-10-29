@@ -10,7 +10,7 @@ export class RichTextViewerComponent  implements OnInit{
   constructor() {}
 
   ngOnInit(): void {
-       console.log('test....');
+       console.log('test.... test....');
   }
 
 }
