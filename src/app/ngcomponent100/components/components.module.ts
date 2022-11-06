@@ -19,6 +19,8 @@ import { QuoteComponent } from "./quote/quote.component";
 import { ToggleComponent } from "./toggle/toggle.component";
 import { DebounceSearchComponent } from "./debounce-search/debounce-search.component";
 import { FormsModule } from "@angular/forms";
+import { SearchListComponent } from "./search-list/search-list.component";
+import { PipesModule } from "../pipes/pipes.module";
 
 
 
@@ -36,7 +38,8 @@ import { FormsModule } from "@angular/forms";
     ModalComponent,
     QuoteComponent,
     ToggleComponent,
-    DebounceSearchComponent
+    DebounceSearchComponent,
+    SearchListComponent
 
 
   ],
@@ -45,8 +48,8 @@ import { FormsModule } from "@angular/forms";
     FormsModule,
     ComponentsRoutingModule,
     SharedModule,
-    FontAwesomeModule
-
+    FontAwesomeModule,
+    PipesModule
   ],
 
 })
