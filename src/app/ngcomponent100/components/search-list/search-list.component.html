@@ -4,7 +4,7 @@
 <ul *ngIf="searchTerm && !hasBeenSelected">
   <div class="item-container">
     <li *ngFor="let item of items | appFilterTerm : searchTerm" (click)="selectSearchTerm(item)"
-    ></li>
+    >{{item}}</li>
   </div>
 
   </ul>

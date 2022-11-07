@@ -21,7 +21,9 @@ import { FilterTermPipe } from './filter-term.pipe';
     CommonModule,
     PipesRoutingModule,
     SharedModule
-
+  ],
+  exports: [
+    FilterTermPipe
   ]
 })
 export class PipesModule { }

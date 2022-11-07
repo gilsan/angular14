@@ -65,7 +65,11 @@
    <app-debounce-search body (searchUpdate)="debounceExampleMethod($event)" ></app-debounce-search>
 </app-card>
 
-
+<app-card [iconClass]="'pi pi-chevron-circle-right'" [title]="'검색'"  [subTitle]="'검색'">
+  <app-search-list body
+   [items]="['United State','Mexico', 'United Arab Emirate']"
+  ></app-search-list>
+</app-card>
 
 
 </div>
