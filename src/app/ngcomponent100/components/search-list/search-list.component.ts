@@ -1,4 +1,4 @@
-import { Component, Input } from "@angular/core";
+import { Component, Input, OnInit } from "@angular/core";
 
 
 @Component({
@@ -6,13 +6,19 @@ import { Component, Input } from "@angular/core";
   templateUrl: './search-list.component.html',
   styleUrls: ['./search-list.component.scss']
 })
-export class SearchListComponent {
+export class SearchListComponent implements OnInit{
 
   @Input() items: string[] = [];
   searchTerm = '';
   hasBeenSelected = false;
 
+  ngOnInit() {
+
+  }
+
+
   updateSearchTerm(value: string): void {
+
     this.searchTerm = value;
     this.hasBeenSelected = false;
   }
