@@ -21,6 +21,7 @@ import { DebounceSearchComponent } from "./debounce-search/debounce-search.compo
 import { FormsModule } from "@angular/forms";
 import { SearchListComponent } from "./search-list/search-list.component";
 import { PipesModule } from "../pipes/pipes.module";
+import { CounterComponent } from "./counter/counter.component";
 
 
 
@@ -39,7 +40,8 @@ import { PipesModule } from "../pipes/pipes.module";
     QuoteComponent,
     ToggleComponent,
     DebounceSearchComponent,
-    SearchListComponent
+    SearchListComponent,
+    CounterComponent
 
 
   ],

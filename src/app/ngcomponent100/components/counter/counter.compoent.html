@@ -1,0 +1,10 @@
+<div class="counter-container">
+  <button class="decrement">
+    <fa-icon [icon]="faMinus"></fa-icon>
+  </button>
+  <input type="number" [(ngModel)]="counter" [min]="min" [max]="max">
+
+  <button class="increment">
+    <fa-icon [icon]="faPlus"></fa-icon>
+  </button>
+</div>
