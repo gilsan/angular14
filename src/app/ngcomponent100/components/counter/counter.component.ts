@@ -15,6 +15,7 @@ export class CounterComponent {
   faPlus = faPlus;
 
   minusOne() {
+    console.log('.....');
     if (this.min < this.counter) {
       this.counter--;
     }
