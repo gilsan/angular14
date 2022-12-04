@@ -12,7 +12,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { EngineComponent } from './components/engine/engine.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -29,6 +29,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     PrimengModule,
     AppRoutingModule,
     FontAwesomeModule,
+    HttpClientModule,
     // NgtCoreModule,
     // NgtMeshModule,
     // NgtBoxGeometryModule,

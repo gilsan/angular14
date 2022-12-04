@@ -12,6 +12,10 @@ const routes: Routes = [
     path: 'component100',
     loadChildren: () => import('./ngcomponent100/ngcomponent100.module').then((m) => m.Ngcomponent100Module),
   },
+  {
+  path: 'django',
+  loadChildren: () => import('./django/django.module').then((m) => m.DjangoModule),
+},
 
 
 
