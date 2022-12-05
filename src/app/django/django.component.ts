@@ -5,22 +5,22 @@ import { DjangoService } from "./services/django.services";
 @Component({
   selector: 'app-geo',
   templateUrl: './django.component.html',
+  styleUrls: ['./django.component.scss'],
 })
 export class DjangoComponent implements OnInit {
 
+  message = '';
   constructor(
     public service: DjangoService
   ) { }
 
   ngOnInit(): void {
-
-  }
-
-  testing() {
-    this.service.challenges().subscribe(data => {
-      console.log(data);
+    this.service.challenges('2').subscribe(data => {
+      this.message = data.goal;
     })
   }
+
+
 
 
 }

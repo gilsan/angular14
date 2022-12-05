@@ -18,9 +18,9 @@ export class DjangoService implements OnDestroy {
     throw new Error('Method not implemented.');
   }
 
-  challenges(): Observable<any> {
+  challenges(monthName: string): Observable<any> {
 
-   return this.http.get<any>(`${this.serverIP}/challenges/january`);
+   return this.http.get<any>(`${this.serverIP}/challenges/${monthName}`);
 
   }
 
