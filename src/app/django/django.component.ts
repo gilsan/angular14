@@ -15,7 +15,7 @@ export class DjangoComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.service.challenges('2').subscribe(data => {
+    this.service.challenges('3').subscribe(data => {
       this.message = data.goal;
     })
   }
