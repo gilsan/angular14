@@ -15,12 +15,14 @@ export class SidebarComponent implements OnInit {
   animationsItems: MenuItem[] = [];
   sampleAngularLists: MenuItem[] = [];
 
+  gangwonItems: MenuItem[] =[];
+
   constructor(private router: Router, ) {}
   @Output() sidebarshow = new EventEmitter<boolean>();
   ngOnInit(): void {
     this.menuList();
     this.angularItem();
-
+    this.gangwonItem();
   }
 
   menuList() {
@@ -69,6 +71,41 @@ export class SidebarComponent implements OnInit {
       {
         label: '디렉티브',
         icon: 'pi pi-times',
+        routerLink: '/pipes',
+      },
+    ]
+  }
+
+  gangwonItem() {
+    this.gangwonItems = [
+      {
+        label: 'CSV파일올리기',
+        icon: 'pi pi-upload',
+        routerLink: '/component100',
+      },
+      {
+        label: '음식점',
+        icon: 'pi pi-thumbs-up',
+        routerLink: '/pipes',
+      },
+      {
+        label: '휴계소음식점',
+        icon: 'pi pi-thumbs-up',
+        routerLink: '/pipes',
+      },
+      {
+        label: '관광식당',
+        icon: 'pi pi-thumbs-up',
+        routerLink: '/pipes',
+      },
+      {
+        label: '관광유흥음식점',
+        icon: 'pi pi-thumbs-up',
+        routerLink: '/pipes',
+      },
+      {
+        label: '외국인전용유흥음식점',
+        icon: 'pi pi-thumbs-up',
         routerLink: '/pipes',
       },
     ]

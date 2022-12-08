@@ -14,6 +14,8 @@
       (click)="toggle()"
       [style]="{ 'margin-left': '.5em', 'margin-right': '.5em' }"
     ></p-button>
+    <button #btn type="button" pButton label="음식점" class="p-button-text" (click)="restorant.toggle($event)"></button>
+    <p-tieredMenu #restorant [model]="gangwonItems" [popup]="true"></p-tieredMenu>
     <button #btn type="button" pButton label="THREE" class="p-button-text" (click)="menu.toggle($event)"></button>
     <p-tieredMenu #menu [model]="items" [popup]="true"></p-tieredMenu>
     <!--
