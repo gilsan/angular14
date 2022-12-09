@@ -13,10 +13,13 @@ const routes: Routes = [
     loadChildren: () => import('./ngcomponent100/ngcomponent100.module').then((m) => m.Ngcomponent100Module),
   },
   {
-  path: 'django',
-  loadChildren: () => import('./django/django.module').then((m) => m.DjangoModule),
-},
-
+    path: 'django',
+    loadChildren: () => import('./django/django.module').then((m) => m.DjangoModule),
+  },
+  {
+    path: 'gangwon',
+    loadChildren: () => import('./gangwon/gangwon.module').then((m) => m.GangwonModule),
+  },
 
 
 ];

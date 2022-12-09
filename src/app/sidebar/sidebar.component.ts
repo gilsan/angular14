@@ -81,7 +81,7 @@ export class SidebarComponent implements OnInit {
       {
         label: 'CSV파일올리기',
         icon: 'pi pi-upload',
-        routerLink: '/component100',
+        routerLink: '/gangwon/upload',
       },
       {
         label: '음식점',

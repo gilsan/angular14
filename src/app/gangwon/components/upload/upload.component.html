@@ -1,0 +1,24 @@
+<div class="container-box">
+
+  <div class="upload-main">
+    <div class="container">
+      <div class="row justify-content-center">
+
+          <div class="droparea" >
+            <input type="file" name="userfiles" #uploadfile class="droparea inputarea"
+            (change)="onFileSelect($event)" multiple />
+          </div>
+      </div>
+
+      <div style="margin-top: 10px;">
+        <button  class="btn btn-button" (click)="onConfirm()"
+          [disabled]="disabled()">확 인</button>
+          &nbsp;&nbsp;&nbsp;
+        <button  class="btn btn-button" (click)="onCancel()">취 소</button>
+    </div>
+    </div>
+  </div>
+
+
+
+</div>
