@@ -1,6 +1,6 @@
 // 관광식당, 관광유흥음식점업, 외국인전용유흥음식점업
 
-export interface I972401 {
+export interface I072401 {
   id?: string,
   serviceName? : string, // 개방서비스명
   serviceID?: string, //개방서비스아이디
@@ -63,8 +63,7 @@ export interface I972401 {
   insuracneStart?: string, //보험시작일자',
   insuracneEnd?: string, //보험시작일자',
   otherRides?: string, //부대시설내역',
-  ridesArea?: string, //시설규모',
-  foreignRestoranType?: string, //'외국인음식점종류'
+  ridesArea?: string //시설규모',
 }
 
 // 일반음식점 휴게음식점

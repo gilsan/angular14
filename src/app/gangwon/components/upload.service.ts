@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { I072404 } from './gangwon.models';
+import { I072401,I072404 } from './gangwon.models';
 
 
 @Injectable({
@@ -18,6 +18,10 @@ export class UploadService {
 
   public uploadRestorant(restorant: I072404[], tableName: string): Observable<any>  {
     return this.http.post(`${this.apiUrl}/restorant/restorantData`, { data: restorant, tablename: tableName });
+  }
+
+  public uploadForeignRestorant(restorant: I072401[], tableName: string): Observable<any>  {
+    return this.http.post(`${this.apiUrl}/restorant/foreignRestorantData`, { data: restorant, tablename: tableName });
   }
 
 
