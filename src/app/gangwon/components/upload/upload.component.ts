@@ -331,7 +331,7 @@ export class UploadComponent implements OnInit {
           if (this.tablename === '072404' || this.tablename === '072405') {
                 console.log(this.restorant);
                 this.service.uploadRestorant(this.restorant, this.tablename).subscribe(() => {
-                  console.log('국내용 ....!!!!!!!!! ');
+                  console.log('국내용 ....!!!!!!! ');
                   this.restorant = [];
                   alert('디비를 만들었습니다.');
                 });
