@@ -257,6 +257,8 @@ export class UploadComponent implements OnInit {
                   })
 
                 } else if (this.tablename === '072401' || this.tablename === '072402' || this.tablename ==='072403') {
+
+
                     this.foreignResotrant.push({
                       id: this.removeQuote(items[0]),
                       serviceName : this.removeQuote(items[1]), //개방서비스명',
@@ -336,6 +338,7 @@ export class UploadComponent implements OnInit {
                   alert('디비를 만들었습니다.');
                 });
           } else if (this.tablename === '072401' || this.tablename === '072402' || this.tablename === '072403') {
+              console.log(this.foreignResotrant);
               this.service.uploadForeignRestorant(this.foreignResotrant, this.tablename).subscribe(() => {
                 console.log('.... 국외용');
                 this.foreignResotrant = [];
