@@ -152,7 +152,7 @@ export class UploadComponent implements OnInit {
           for (let j = 1; j < arrl; j++) {
               if (rows[j] !== undefined) {
                 const items = rows[j];
-                // console.log(items);
+
                 /*
 
                 console.log('id: ',this.removeQuote(items[0]));
