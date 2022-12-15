@@ -332,14 +332,14 @@ export class UploadComponent implements OnInit {
 
           if (this.tablename === '072404' || this.tablename === '072405') {
                 console.log(this.restorant);
-                this.service.uploadRestorant(this.restorant, this.tablename).subscribe(() => {
+                this.service.uploadRestorant(this.restorant, 'R'+ this.tablename).subscribe(() => {
                   console.log('국내용 ....!!!!!!! ');
                   this.restorant = [];
                   alert('디비를 만들었습니다.');
                 });
           } else if (this.tablename === '072401' || this.tablename === '072402' || this.tablename === '072403') {
               console.log(this.foreignResotrant);
-              this.service.uploadForeignRestorant(this.foreignResotrant, this.tablename).subscribe(() => {
+              this.service.uploadForeignRestorant(this.foreignResotrant, 'R'+ this.tablename).subscribe(() => {
                 console.log('.... 국외용');
                 this.foreignResotrant = [];
                 alert('디비를 만들었습니다.');
