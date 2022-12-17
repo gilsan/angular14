@@ -25,4 +25,19 @@ export class UploadService {
   }
 
 
+
+
+
+  public getLocalRestorant(latitude: string, longitute: string) {
+
+  }
+
+
+
+
+  public getForeignRestorant(latitude: string, longitute: string) {
+
+  }
+
+
 }

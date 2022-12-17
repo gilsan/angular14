@@ -1,5 +1,6 @@
 import { NgModule } from "@angular/core";
 import { RouterModule, Routes } from "@angular/router";
+import { RestorantComponent } from "./components/restorant/restorant.component";
 import { UploadComponent } from "./components/upload/upload.component";
 import { GangwonComponent } from "./gangwon.component";
 
@@ -10,6 +11,7 @@ const routes: Routes = [
       children: [
         { path: '', component: GangwonComponent },
         { path: 'upload', component: UploadComponent },
+        { path: 'restorant', component: RestorantComponent },
       ]
   }
 ];

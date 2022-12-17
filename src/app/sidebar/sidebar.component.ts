@@ -86,7 +86,7 @@ export class SidebarComponent implements OnInit {
       {
         label: '음식점',
         icon: 'pi pi-thumbs-up',
-        routerLink: '/pipes',
+        routerLink: '/gangwon/restorant',
       },
       {
         label: '휴계소음식점',
