@@ -9,7 +9,9 @@ import { Component, OnInit } from "@angular/core";
 export class RestorantComponent implements OnInit {
 
 
-  ngOnInit() {}
+  ngOnInit() {
+    console.log('tag', );
+  }
 
 
 }
