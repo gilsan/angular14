@@ -28,7 +28,7 @@ export class UploadService {
 
 
 
-  public getLocalRestorant(latitude: string, longitute: string) {
+  public getLocalRestorant(latitude: string, longitute: string, page: number, numberperpage: number) {
 
   }
 
