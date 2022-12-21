@@ -11,6 +11,7 @@ export class RestorantComponent implements OnInit {
 
   ngOnInit() {
     console.log('tag', );
+
   }
 
 
