@@ -10,7 +10,7 @@ export class RestorantComponent implements OnInit {
 
 
   ngOnInit() {
-    console.log('tag ===== ==== ===== == gjcity/gjcity123', );
+    console.log('tag ===== ==== ===== = gjcity/gjcity123', );
 
   }
 
